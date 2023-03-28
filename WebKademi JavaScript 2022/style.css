@@ -1,0 +1,85 @@
+body {
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+.none {
+  display: none;
+}
+
+.red {
+  border: 1px solid red;
+}
+
+.red-text {
+  color: red;  
+}
+
+.green-text {
+  color: green;  
+}
+
+.green {
+  border: 1px solid green;
+}
+
+.blue {
+  border: 1px solid blue;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/*Шапка */
+header {
+  padding: 30px 30px 40px;
+  background-color: #f7e017;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-top: 0;
+}
+
+.school-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #bba800;
+}
+
+/*Конверт валют*/
+.currency-box {
+  max-width: 400px;
+}
+
+.currency-row {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(175,175,175);
+  overflow: hidden;
+}
+
+.currency-row:first-child {
+  border-radius: 6px 6px 0 0;
+}
+
+.currency-row:last-child {
+  border-radius: 6px 6px 0 0;
+}
+
+.currency-row span {
+  margin-right: 10px;
+  font-weight: 20;
+  font-size: 22px;
+}
+
+.currency-info {
+  margin-right: 15px;
+  padding: 10px 15px;
+  height: 100%;
+  font-size: 22px;
+  background-color: #e3e3e3;
+}
