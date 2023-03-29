@@ -2437,7 +2437,7 @@ async function getCurrencies () {
 }
 getCurrencies();*/
 
-/*// 1.2.1 Вариант Передача данных через асинхронную функцию. Этот вариант более удобен, чем fetch.
+// 1.2 Вариант Передача данных через асинхронную функцию. Этот вариант более удобен, чем fetch.
 async function getCurrencies () {
   const url = 'https://www.cbr-xml-daily.ru/daily_json.js'
   const response = await fetch(url);
@@ -2451,30 +2451,32 @@ async function getCurrencies () {
 
   usdElement.innerText = usdRate;
   eurElement.innerText = eurRate;
-}
-getCurrencies();*/
-
-
-// 1.2.2 Вариант По эксперементируем. Делим на две разные функции.
-async function getCurrencies () {
-  const url = 'https://www.cbr-xml-daily.ru/daily_json.js'
-  const response = await fetch(url);
-  const data = await response.json();
-  // №2. Отобразить эти данные на странице
-  renderRates(data)
 }
 getCurrencies();
 
+//----------------------------------------
+
+
+// 1.2.2 Вариант По эксперементируем. Делим на две разные функции.
+async function getCurrencies2 () {
+  const url = 'https://www.cbr-xml-daily.ru/daily_json.js'
+  const response = await fetch(url);
+  const data = await response.json();
+  // №2. Отобразить эти данные на странице
+  renderRates2(data)
+}
+getCurrencies2();
+
 //Функция которая рендерит валюту
-function renderRates(data) {
-  const usdRate = data.Valute.USD.Value.toFixed(2);//.toFixed(2) после запятой показывать до двух знаков курс валюты
-  const eurRate = data.Valute.EUR.Value.toFixed(2);//.toFixed(2) после запятой показывать до двух знаков курс валюты
+function renderRates2(data) {
+  const cnyRate = data.Valute.CNY.Value.toFixed(2);//.toFixed(2) после запятой показывать до двух знаков курс валюты
+  const zarRate = data.Valute.ZAR.Value.toFixed(2);//.toFixed(2) после запятой показывать до двух знаков курс валюты
 
-  const usdElement = document.querySelector('#usd');
-  const eurElement = document.querySelector('#eur');
+  const cnyElement = document.querySelector('#cny');
+  const zarElement = document.querySelector('#zar');
 
-  usdElement.innerText = usdRate;
-  eurElement.innerText = eurRate;
+  cnyElement.innerText = cnyRate;
+  zarElement.innerText = zarRate;
 
 }
 
