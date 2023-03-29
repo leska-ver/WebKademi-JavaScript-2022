@@ -2338,7 +2338,7 @@ startPromise()*/
 
 
 // ==== Несколько асинхроных операций. Серия промисов ====
-/*// 1.1 Вариант
+// 1.1 Вариант
 function checkRooms() {
   return new Promise(function (resolve, reject) {
     setTimeout(function () {
@@ -2414,7 +2414,7 @@ async function checkVacation(){
   } 
 }
 //Запуск функции
-checkVacation()*/
+checkVacation()
 
 
 // ==== Пример fetch с промисами данных по API ====
